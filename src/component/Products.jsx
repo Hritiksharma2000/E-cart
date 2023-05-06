@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Skeleton from 'react-loading-skeleton';
 import { NavLink } from 'react-router-dom';
+import Footers from './Footers';
 
 
 const Products = () => {
@@ -47,8 +48,8 @@ const Products = () => {
   };
 
 
-  const filterProduct=(cat)=>{
-    const updatedList = data.filter((x)=>x.category === cat)
+  const filterProduct=(category)=>{
+    const updatedList = data.filter((x)=>x.category === category)
     setFilter(updatedList);
   }
   const ShowProducts = () => {
@@ -65,15 +66,28 @@ const Products = () => {
           return (
             <>
               <div className="col-md-3 mb-4">
-                <div className="card h-100 text-center p-4" key={product.id}>
-                  <img src={product.image} className="card-img-top" alt={product.title}  height="250px"/>
+                <div className="card h-100 text-center p-4 border border-1" key={product.id}>
+                  <img src={product.image} className="card-img-top rounded mt-4" alt={product.title}  height="250px"/>
                   <div className="card-body">
                     <h5 className="card-title mb-0">{product.title.substring(0,12)}...</h5>
                     <p className="card-text lead fw-bold">${product.price}</p>
-                    <NavLink to='/product' className="btn btn-outline-dark">Buy Now</NavLink>
+                    <NavLink to={`/productmain/${product.id}`} className="btn btn-outline-dark">Buy Now</NavLink>
                   </div>
                 </div>
               </div>
+              {/* <div className="col-md-3 border col-mb-6">
+                <div className="text-center">
+                <img src={product.image} className="card-img-top rounded mt-4" alt={product.title}  height="250px"/>
+                </div>
+                <div>
+                    <p className="mt-2 fw-bold"><span className="border px-2 rounded bg-warning text-light">{product.rating && product.rating.rate}</span>Tom Hiddle</p>
+                </div>
+                <div>
+                <h5 className="card-title mb-0">{product.title.substring(0,12)}...</h5>
+                     <p className="card-text lead fw-bold">${product.price}</p>
+                    <NavLink to={`/productmain/${product.id}`} className="btn btn-outline-dark">Buy Now</NavLink>
+                </div>
+            </div> */}
             </>
           )
         })}
@@ -94,6 +108,7 @@ const Products = () => {
           {loading ? <Loading /> : <ShowProducts />}
         </div>
       </div>
+      <Footers/>
     </div>
   )
 }

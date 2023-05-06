@@ -1,0 +1,118 @@
+.navimg {
+    margin-left: 150px;
+}
+
+.divdata {
+    margin-right: 150px;
+}
+
+@media screen and (max-width: 991px) {
+    .navimg {
+        margin-left: 15px;
+    }
+    .divdata {
+        margin-right: 10px;
+    }
+}
+
+.cardtext {
+    text-align: center;
+    top: 180px;
+    font-size: xx-large;
+    position: relative;
+    font-weight: 600;
+}
+
+.cardtext2 {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 300;
+}
+
+.cardbtn2 {
+    background-color: rgb(199, 12, 12);
+    color: aliceblue;
+}
+
+.cardbtn2:hover {
+    background-color: rgb(243, 241, 245);
+    color: red;
+}
+
+.cardbtn1 {
+    background-color: rgb(241, 234, 234);
+    color: red;
+}
+
+.cardbtn1:hover {
+    background-color: rgb(199, 12, 12);
+    color: aliceblue;
+}
+
+@media screen and (max-width: 991px) {
+    .cardtext {
+        text-align: center;
+        top: 130px;
+        font-size: x-large;
+        position: relative;
+        font-weight: 500;
+    }
+}
+
+.numberdiv {
+    width: 400px;
+    background-color: white;
+    height: 110px;
+}
+
+.section10 a {
+    text-decoration: none;
+    color: rgb(82, 77, 77);
+    display: block;
+    margin-top: 28px;
+}
+
+.icon1>ion-icon {
+    color: blue;
+}
+
+.icon2>ion-icon {
+    color: red;
+}
+
+.icon3>ion-icon {
+    color: rgb(60, 18, 160);
+}
+
+.numbermaindiv {
+    justify-content: center;
+}
+
+.component4text {
+    color: rgb(192, 39, 39);
+    font-weight: 700;
+}
+
+.component5div {
+    background-color: rgb(49, 47, 72);
+}
+
+.data1h3 {
+    font-weight: 700;
+}
+
+.data3div p {
+    color: rgb(77, 72, 72);
+}
+
+.data3div h2 {
+    font-weight: 900;
+}
+
+.data3div h5 {
+    font-weight: 600;
+}
+
+#popover-basic {
+    height: 50%;
+}
