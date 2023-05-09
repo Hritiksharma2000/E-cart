@@ -7,11 +7,8 @@ import Product from './component/Productmain';
 import Cart from './component/Cart';
 import Contact from './component/Contact';
 import Aboutpage from './component/Aboutpage';
-import { useSelector } from 'react-redux';
-
 
 function App() {
-  const cart=useSelector(state=>state.cart)
   return (
     <>
       <Navbar />
@@ -22,7 +19,6 @@ function App() {
         <Route exact path="/Aboutpage" Component={Aboutpage} />
         <Route exact path="/Products" Component={Products} />
         <Route exact path="/Cart" Component={Cart} />
-        <Route path="/Cart" element={<cart authed={cart} />} />
         <Route exact path="/Productmain/:id" Component={Product} />
       </Routes>
     </>

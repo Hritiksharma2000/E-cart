@@ -8,14 +8,14 @@ import { Link, Outlet } from 'react-router-dom';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
-import { useSelector } from 'react-redux';
+// import { useSelector } from 'react-redux';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
 
 function NavbarComponent( name, ...props) {
-  const cart=useSelector(state=>state.cart)
+  // const cart=useSelector(state=>state.cart)
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
@@ -24,7 +24,7 @@ function NavbarComponent( name, ...props) {
       {[ 'lg'].map((expand) => (
         <Navbar key={expand}  expand={expand} className="mb-3 py-4">
           <Container fluid>
-          <Navbar.Brand href="#home">
+          <Navbar.Brand href="/Aboutpage">
             <img
               src="https://www.aerem.co/images/logo.png"
               width="150"
@@ -42,7 +42,7 @@ function NavbarComponent( name, ...props) {
             >
               <Offcanvas.Header closeButton>
                 <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-                  Dreshop
+                  Aerem
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
@@ -64,7 +64,8 @@ function NavbarComponent( name, ...props) {
                   </Nav.Link> 
                   <Nav.Link>
                   <Link  className='me-4' to="/Cart">
-                <Button variant='danger'> <i className='fa fa-shopping-cart me-1'> </i> Cart ({cart.reduce((v,i)=> v+i.qty, 0)})</Button>
+                <Button variant='danger'> <i className='fa fa-shopping-cart me-1'> </i> Cart</Button>
+                {/* ({cart.reduce((v,i)=> v+i.qty, 0)}) */}
                   </Link>
                   </Nav.Link> 
                  
@@ -78,7 +79,7 @@ function NavbarComponent( name, ...props) {
       <Outlet/>
       <Offcanvas style={{width:'45%'}} show={show} onHide={handleClose} {...props} placement={'end'}>
         <Offcanvas.Header closeButton>
-        <p className='m-0 p-0'><h3 className='m-0 p-0'>Register with DreShop</h3> <br />Get started by filling in the information below.</p>
+        <p className='m-0 p-0'><h3 className='m-0 p-0'>Register with Aerem</h3> <br />Get started by filling in the information below.</p>
         </Offcanvas.Header>
         <Offcanvas.Body>
         <Form>

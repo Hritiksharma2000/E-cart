@@ -116,3 +116,13 @@
 #popover-basic {
     height: 50%;
 }
+
+.filterbtn {
+    background-color: rgb(211, 7, 7);
+    color: white;
+    border: 0px;
+}
+
+.filterbtn:hover {
+    background-color: rgb(137, 6, 6);
+}

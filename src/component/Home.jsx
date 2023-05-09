@@ -6,7 +6,7 @@ import Products from './Products';
 
 function Home() {
   const [index, setIndex] = useState(0);
-
+ 
   const handleSelect = (selectedIndex) => {
     setIndex(selectedIndex);
   };

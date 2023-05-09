@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { addCart } from '../redux/action';
 import { useParams } from 'react-router';
 import Skeleton from 'react-loading-skeleton';
+import './Aeremcss.css';
 import { NavLink } from 'react-router-dom';
 
 const Product = () => {
@@ -51,7 +52,7 @@ const Product = () => {
         const ShowProduct = () => {
             return (
                 <>
-                    <div className="col-md-6">
+                    <div className="col-md-6 border border-1">
                         <img src={Product.image} alt={Product.title} height='400px' width='400px' />
                     </div>
                     <div className="col-md-6">
@@ -69,10 +70,10 @@ const Product = () => {
                         <p className="lead">
                             ${Product.description}
                         </p>
-                        <button className="btn btn-outline-dark" onClick={() => addProduct(Product)}>
+                        <button className="btn btn-outline-dark filterbtn" onClick={() => addProduct(Product)}>
                             Add to Cart
                         </button>
-                        <NavLink to='/cart' className="btn btn-outline-dark ms-2 px-3 py-2">
+                        <NavLink to='/cart' className="btn btn-outline-dark ms-2 px-3 py-2 filterbtn">
                             Go to Cart
                         </NavLink>
                     </div>
